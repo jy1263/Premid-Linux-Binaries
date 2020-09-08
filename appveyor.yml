@@ -2,8 +2,9 @@ image: Ubuntu
 cache:
   - node_modules
 install:
+  - sudo apt-get purge -qq --auto-remove nodejs
   - curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-  - sudo apt-get install -y nodejs
+  - sudo apt-get install -qq -y nodejs
   - node -v 
   - set CI=true
   - npm install -g npm@latest
