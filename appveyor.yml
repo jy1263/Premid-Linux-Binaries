@@ -1,6 +1,8 @@
 image: Ubuntu
 cache:
   - node_modules
+environment:
+  nodejs_version: "14"
 install:
   - sudo apt-get purge -qq --auto-remove nodejs
   - curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
